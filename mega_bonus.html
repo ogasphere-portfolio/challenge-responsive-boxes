@@ -1,0 +1,50 @@
+<h1 id="mega-bonus-skull">Mega Bonus 💀</h1>
+<p>On aurait pu l'appeler le <em>Mega Bonus de la mort</em>, mais on s'est contenté de l'appeler <em>Mega Bonus</em> et d'ajouter un crâne à côté…</p>
+<p><strong>Notre objectif</strong>  <br />
+écrire une série de classes qui vont nous simplifier la vie pour créer des sites <em>responsives</em></p>
+<h2 id="créons-des-classes-utiles-">Créons des classes utiles !</h2>
+<p>Créer un fichier vierge, que l'on va appeler <code>grid.css</code>.  <br />
+Dedans, nous allons coder une série de classe.</p>
+<p>Définissons pour commencer les noms de tailles d'écran suivant :</p>
+<ul>
+<li>Extra-small (<code>xs</code>) : en-dessous de 600px</li>
+<li>Small (<code>sm</code>) : entre 600 et 900px</li>
+<li>Medium (<code>md</code>) : entre 900 et 1200px</li>
+<li>Large (<code>lg</code>) : au-dessus de 1200px</li>
+</ul>
+<p>Pour ces 4 tailles, on va se créer des classes.  <br />
+Prêt ? C'est parti !</p>
+<h3 id="disparition">Disparition</h3>
+<p>Il nous faut des classes permettant aux boites de disparaitre selon une taille d'écran.  <br />
+Par exemple : <code>&lt;div class="box hidden-sm"&gt;</code> permet de faire disparaitre cette boite entre 600 et 900px.</p>
+<p>Ecrire les classes pour les 4 tailles d'écran : <code>.hidden-xs</code>, <code>.hidden-sm</code>, <code>.hidden-md</code> et <code>.hidden-lg</code>.</p>
+<h3 id="des-colonnes">Des colonnes</h3>
+<p>Prenons comme postulat de découper la page en 12 colonnes.<br />
+On va s'écrire des classes permettant d'afficher de donner une largeur en colonnes à nos boites.</p>
+<p>Par exemple : <code>&lt;div class="box col-xs-6 col-sm-9"&gt;</code></p>
+<ul>
+<li>En dessous de 600px, la boite prend 6 colonnes sur 12 (soit 50% de la page)</li>
+<li><strong>A partir de 600px</strong> (et non seulement entre 600 et 900), la boite prend 9 colonnes sur 12 (soit 75% de la page)</li>
+</ul>
+<p>Ecrire les classes <code>.col-{taille}-{colonnes}</code>.  <br />
+<code>.col-xs-1</code>, <code>.col-xs-2</code>, <code>.col-xs-3</code>, …, <code>.col-sm-1</code>, <code>.col-sm-2</code>, …, <code>.col-md-1</code>, <code>.col-md-2</code> …, <code>.col-lg-11</code>, <code>.col-lg-12</code>.</p>
+<p>Oui, ça fait <strong>48 classes</strong>. Heureusement, le copier-coller existe !</p>
+<h3 id="on-pousse-on-tire">On pousse, on tire</h3>
+<p>Une boite peut désormais avoir une largeur exprimée en colonnes.<br />
+Sur le même principe, on va pouvoir bouger une boite d'un certain nombre de colonnes.</p>
+<p>Par exemple : <code>&lt;div class="box col-xs-push-2 col-sm-push-0 col-md-pull-3"&gt;</code></p>
+<ul>
+<li>En dessous de 600px, la boite est décalée de 2 colonnes vers la droite</li>
+<li>A partir de 600px, la boite n'est plus décalée (elle est décalée de 0 colonnes)</li>
+<li>A partir de 900px, la boite est décalée de 3 colonnes vers la gauche</li>
+</ul>
+<p>Ecrire les classes <code>.col-{taille}-{decalage}-{colonne}</code>.  <br />
+<code>.col-xs-push-0</code>, <code>.col-xs-push-1</code>, …, <code>.col-lg-pull-12</code>.</p>
+<p>Ouais, là ça fait un paquet de classe !<br />
+<strong>104 classes</strong> pour être précis.<br />
+Novice en copier-coller s'abstenir.</p>
+<h2 id="on-remet-ça-">On remet ça ?</h2>
+<ul>
+<li>Commenter ce que vous avez ajouté dans <code>style.css</code>, et ajouter <code>grid.css</code>.</li>
+<li>Refaire le challenge uniquement avec les classes qu'on vient de créer, en rajoutant des classes dans <code>index.html</code>.</li>
+</ul>
